@@ -1,0 +1,128 @@
+#주석 = 메모
+# 연산
+# + - * /   더하기 빼기 곱하기 나누기
+# % : 몫 연산자
+# // : 나머지 연산자
+# **: 제곱 연산자
+
+# 5%2
+
+#출력함수 print
+# print(출력값)
+# print(출력값, 출력값, 출력값, 출력값,,,,)
+
+# print(5 % 2)
+# print(5 // 2)
+# print(5 ** 5)
+
+# 변수
+# 변수 이름 = 저장할 값
+# a = 13
+# print(a)
+# print(a+4)
+# b = 24
+# c = a + b - 20
+# a = a+1
+# print(c)
+# print(a)
+# a = b
+# print(a)
+
+# a = 212
+# print(a)
+# print(a-14)
+# b = 271
+# c = b - a
+# print(c)
+# 전체 # : ctrl + /
+
+# print('Hello, python!')
+
+# print(5 % 3 - 2 * 2)
+
+
+# a = 2 ** 2
+# print(a)
+# b = a ** a
+# print(b)
+# c = (b - a) * 3
+# print(b)
+# print(c)
+# print((a + b + c) % c)
+# d = 48+c
+# print(d)
+# print(a,d,b,c)
+# a = a+49
+# print(a)
+
+# a = 3
+# b = 7
+# c=a
+# d=b
+# a=d
+# b=c
+# print(a)
+# print(b)
+
+a=3
+b=6
+c=9
+d=a
+e=b
+f=c
+b=d
+c=e
+a=f
+print(a)
+print(b)
+print(c)
+
+# 자료형
+# 정수형 :int
+# 실수형 : float
+# 문자열 : str
+# bool : beel
+
+# 자료형을 알려주는 함수 type
+# type()
+
+# print(type(41))
+# print(type(1.1))
+# print(type("Hi"))
+# print(type(True))
+
+# # 문자열 : 따옴푤르 이용하여 표현
+# a = "hello, python!"
+# # 문자열 연산
+# print(a + "welcome") # 문자열 하나로 합칠 수 있다
+# #문자열과 정수형과의 연산
+# print(a * 5)
+
+# 형변환
+# a = 140
+# a = str(a)
+# print(a, type(a))
+# b=25
+# b=int(b)
+# print(b, type(b))
+# c=4.7
+# c=int(c)
+# print(c, type(C))
+#
+# d= "python"
+# d= int(d)
+# print(d, type(d))
+
+#인덱싱,슬라이싱
+test_str = "hello python welcome to program"
+#인덱싱 : 특정 문자 하나를 대상으로
+print(test_str[4])
+#슬라이싱
+print(test_str[3:7])
+print(test_str[:10])
+print(test_str[15:])
+print(test_str[4:16:3])
+print(test_str[:7:2])
+print(test_str[18::5])
+print(test_str[::7])
+print(test_str[::-1])
