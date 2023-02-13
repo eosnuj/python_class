@@ -1,0 +1,146 @@
+# 입력 함수
+#input()
+
+# a= input()
+#print(a, type(a)) #문자열로 반환한다
+
+#정수를 입력하는 방법
+# a2 = int(input())
+#print(a2, type(a2))#정수값 이외의 값을 넣은면 에러발생
+# 인덱싱, 슬라이싱,
+# test_str = "hello python welcome to program"
+# print(test_str[1:4:7])
+
+# a = "so"
+# print(a + "sleepy")
+# print(a * 4)
+
+
+# H= "Hello python welcome to program"
+# print(H[1:4:3])
+
+#조건 연산자
+
+#> < >= <=
+# == : 서로 같다
+# != 서로 다르다
+# and :두 조건이 모두 참일 때만참
+# or : 두 조건중 한 조건이라도 참이라면 참
+# not : 참값 반전
+# print(1>3)
+# print(7*8>=99 and not(1<0))
+# print(8==9 or 2+2==4)
+# print(not(1<3))
+#
+# print(not(13>0 and 56/8 <7))
+# print(not(13>0)or not(56/8 <7))
+
+#제어문
+# 조건문의 종류 : if, else, elif
+
+# if 조건 :
+#     실행코드
+#     ~
+#     ~
+#     ~
+# #ㅁ=3
+# #
+# if a>2
+#     print(a+2)
+
+# if조건:
+#     실행코드
+# else:
+#     실행 코드
+
+#a = 12
+#
+# if a == 11:
+#     print("T1")
+# else:
+#     print("T2")
+
+#if 조건:
+#실행코드
+#elif 조건:
+#   실행코드
+
+# a="Hi"
+# if a=="Hello":
+#     print("T")
+# elif a=="Hi":
+#     print("F")
+
+# if조건:
+#     실행코드
+
+# if조건:
+#     실행코드
+# else:
+#     실행 코드
+
+# if조건:
+#     실행코드
+#elif 조건:
+#   실행코드
+# else:
+#     실행 코드
+
+
+# if조건:
+#      실행코드
+# elif 조건:
+#    실행코드
+# elif 조건:
+#    실행코드
+# elif 조건:
+#    실행코드
+# elif 조건:
+#     실행코드
+# elif 조건:
+#    실행코드
+
+# if조건:
+#      실행코드
+# elif 조건:
+#    실행코드
+# elif 조건:
+#    실행코드
+# elif 조건:
+#    실행코드
+# elif 조건:
+#    실행코드
+# elif 조건:
+#    실행코드
+#  else:
+#    실행 코드
+
+
+
+#1번문제
+# a=int(input())
+# b=int(input())
+# if a<b:
+#     print("<")
+# else:
+#     print(">")
+#2번문제
+# a = int(input())
+# if 90<=a<=100:
+#     print("A")
+# elif 80<=a<=89:
+#     print("B")
+# elif 70<=a<=79:
+#     print("c")
+# elif 60<=a<=69:
+#     print("d")
+# else:
+#     print("f")
+
+#3변문제
+
+a= int(input())
+if :
+    print("1")
+else:
+    print('0')
