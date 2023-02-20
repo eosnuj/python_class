@@ -164,3 +164,13 @@
 # print("4")
 
 
+#5번 문제
+# H= int(input())
+# M= int(input())
+# 
+# if M>44:
+#     print(H,M-45)
+# elif H>=1 and M<=44:
+#     print(H-1,M+15)
+# else:
+#     print(23, m+15)
