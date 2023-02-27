@@ -1,0 +1,142 @@
+# for i in range(1,11,3):
+#     print("hello pycharm, welcome to program file",i)
+#
+# a=15
+# while a>=13:
+#     print("foward to me")
+#     a-=1
+
+
+# a=int(input())
+# for i in range(1,a+1):
+#     print(" "*(a+1)+"*"*(a+1_i))
+
+# kB=68
+# if kB>=40:
+#     print("cromasoftware")
+# elif kB>=60:
+#     print("chromesoftware")
+# else:
+#     print("internet explore")
+
+
+
+# for i in range(10):
+#     print("hello human, welcome to new world")
+#     if i==5:
+#         break
+
+
+# for i in range(10):
+#     print("6^^")
+#     if i==4:
+#         continue
+
+# 4번쨰 수업 어서오고~
+
+
+# 4번문제
+# a = int(input())
+# for i in range(1, a + 1):
+#     print(" " * (i - 1) + "*" * (n - i + 1)
+#
+#
+# 5번문제
+# a = int(input())
+# for i in range(1, a + 1):
+#     print(" " * (n - i) + "*" * ((2 * i) - 1)
+#
+#
+# 6번문제
+# a = int(input())
+# for i in range(a, 0, -1):
+#     print(" " * (a - i) + "*" * (2 * i - 1))
+#
+#
+# 7번문제
+# a = int(input())
+# for i in range(1, a):
+#      print(" " * (a - i) + "*" * (2 * i - 1))
+# for i in range(a, 0, -1):
+#      print(" " * (a - i) + "*" * (2 * i - 1))
+
+#8번 문제
+
+# a= int (input())
+# for i in range(1,a+1):
+#     print("*"*i+" "*((a*2)-(2*i))+"*"*i)
+# for i in range(a-1,0,-1):
+#     print("*"*i+" "*((a*2)-(2*i))+"*"*i)
+
+#9번문제
+
+# a=int(input())
+# for i in range(1,a+1):
+#     print(" "*(i-1)+"*"*(2*(a-i)+1))
+# for i in range(1,a):
+#     print(" "*(a-i-1)+"*"*((2*i)+1))
+
+#문제 1,3,4
+
+# a= int(input())
+# for i in range(1,10):
+#     print(a,"*",i,"=",a*i)
+
+# n= int(input())
+# k=0
+# for i in range(1,n+1):
+#     k+=i
+# print(k)
+
+# x=int(input())
+# n=int(input())
+# c=0
+# for i in range(n):
+#     a = int(input())
+#     b = int(input())
+#     c+=a*b
+# if x==c:
+#     print("yes")
+# else:
+#     print("no")
+
+# a= int(input())
+
+# for i in range(1,10):
+#     print(a,"*",i,"=",a*i)
+
+# for j in range(2,10):
+#     for i in range(1,10):
+#         print(j,"*",i,"=",j*i)
+
+#사용자 정의 함수
+
+#def 함수 이름():
+#   코드
+#  def func():
+#           print("hello, python!")
+#           
+#           
+# #함수호출
+# 
+# func()
+
+#매개변수가 설정된 함수(인자를 받는 함수)
+#def 함수이름(매개변수,매개변수,매개변수,..)
+#    코드
+# #def func2(): #a -> 매개변수
+#    print(a+2)
+#    
+#    func2(5)->인자
+
+#반환값이 존재하는 함수
+
+#def 함수이름():
+#    코드
+#   ...
+#  return반환값
+
+#def fuc]nc3():
+#   retun10
+
+#print(func3())
