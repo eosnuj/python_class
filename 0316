@@ -257,3 +257,4 @@ list1.append(1)
 print(list1) # 여기까지 1-3
 
 set1=set(list1)
+print(list1) # 여기까지 1-4
