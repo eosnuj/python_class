@@ -1,0 +1,106 @@
+# n= int(input())
+# s=0
+#
+# while n != 0:
+#     s+=n%10
+#     n=n//10
+
+
+# n=input()
+# l=len(n)
+# n=int(n)
+# s=0
+#
+# for i in range(l):
+#     s +=n%10
+#     n=n//10
+#
+# print(s)
+
+
+
+
+
+
+
+
+
+# test_str="hello python welcome to program!"
+# print("'".join(test_str))
+# test_str="abcde"
+# a=test_str.upper
+# b=test_str.capitalize
+# c=test_str.lower
+# print(a,b,c)
+# test_str="  hello python,welcome to the world!  "
+# a=test_str.islower()
+# b=test_str.strip()
+# print(a,b)
+# c=test_str.split()
+# print(c)
+
+# numbers = []
+# for _ in range(9):
+#     i = int(input())
+#     numbers.append(i)
+# print(max(numbers))
+# print(numbers.index(max(numbers))+1)
+
+
+# numbers=[]
+# for _ in range(9):
+#      i = int(input())
+#      numbers.append(i)
+# if numbers[0]>=numbers[1]:
+#      print(numbers[0],index(0))
+# elif numbers1[0]<=numbers[1]:
+#      print(numbers[1],index(1))
+
+
+# lst=[]
+# for i in range(9):
+#      lst.append(int(input))
+# temp=lst[0]
+#
+# for i in range(len(lst)):
+#      if temp <lst[i]
+#           temp=lst[i]
+#
+#      print(temp)
+#      print(lst.index(temp)+1)
+
+
+# lst=[]
+# for i in range(9):
+#      lst.append(int(input))
+# lst.sort() #리스트 정렬 메소드
+# print(lst.sort()) # 오름차순
+#lst.sort(reverse=True) # 내림차순
+# pritn(lst)
+
+# N = int(input())
+# s = list(map(int, input().split()))
+# M = max(s)
+# sum = 0
+#
+# for i in range(N):
+#     s[i] = s[i]/M*100
+#     sum += s[i]
+# k = sum/N
+# print(k)
+
+# n = input()
+# print(sum(map(int, n)))
+
+# n= int(input())
+# print(int(n[0])+int[1]+int[2])
+
+#소수 판별하기 (소수 =prime number)
+#정수n을 입력받는다.
+#소수라면 "P"아니면 "n"을 <<한번>>입력한다,
+
+
+n=int(input())
+b=0
+
+for i in range(2,a):
