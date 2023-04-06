@@ -1,0 +1,61 @@
+# a = int(input())
+# b = 0
+#
+# for i in range(2, a):
+#     if a % i == 0:
+#         b = 1
+#         break
+#
+# if b == 0:
+#     print("P")
+# else:
+#     print("n")
+
+
+# def solution(today, terms, privacies):
+#     answer = []
+#     y, m, d = today.split('.')
+#     tday = int(y) * 12 * 28 + int(m) * 28 + int(d)
+#     terms_dic = {}
+#
+#     for i in terms:
+#         a = i.split(" ")
+#         terms_dic[a[0]] = int(a[1]) * 28
+#
+#     for i in range(len(privacies)):
+#         first = privacies[i].split(" ")
+#         second = first[0].split('.')
+#
+#         cday = int(second[0]) * 12 * 28 + int(second[1]) * 28 + int(second[2]) + terms_dic[first[1]]
+#         if tday >= cday:
+#             answer.append(i + 1)
+#
+#     return answer
+#
+# print(solution("2022.05.19",["A 6", "B 12", "C 3"],["2021.05.02 A", "2021.07.01 B", "2022.02.19 C", "2022.02.20 C"]))
+
+
+
+
+
+# def solution(babbling):
+#     count=0
+#     babble = ["aya","ye","woo","ma"]
+#     for i in babbling:
+#         for word in babble:
+#             if word*2 not in i:
+#                 i=i.replace(word," ")
+#         if i.strip() == "":
+#             count+=1
+#     return count
+#
+# print(solution(["ayaye", "uuu", "yeye", "yemawoo", "ayaayaa"]))
+
+
+
+#ascii 코드
+#ard() : 주어진 값의 아스키코드 값을 반환
+#chr() : 주어진 값의 문자값을 반환
+
+
+# print(chr(1))
