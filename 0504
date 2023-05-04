@@ -1,0 +1,70 @@
+# def fi(n):
+#     if n==0:
+#         return 0
+#     elif n==1 or n==2:
+#         return 1
+#     else:
+#         return fi(n-2)+fi(n-1)
+#재귀함수를 사용할 경우 식이 간단해지지만 계산이 오래걸림
+
+# def fi(n):
+#     a=1
+#     b=1
+#     if n==0:
+#         return 0
+#     elif n==1 or n==2:
+#         return 1
+#     for i in range(1, n):
+#         a,b=b,a+b
+#
+#     return a
+# print(fi(4))
+
+
+#import : 외부파일 인용
+#import random
+
+#print(random.randint(a,b)) : a이상 b미만의 무작위 값을 뽑는 함수
+# print(random.randrange(100))
+
+
+
+
+#1~100사이의 무작위값을 리스트에 저장한다
+#홀수,짝수를 판단하여 한번에 출력하는 코드
+#최대 최솟값을 찾아 출력하는 코드
+# import random
+# lst=[]
+# for i in range(0,10):
+#     lst.append(random.randrange(1,101))
+# odd=[]
+# even=[]
+# for j in lst:
+#     if j%2==1:
+#        odd.append(j)
+#     elif j%2==0:
+#         even.append(j)
+# print(odd,even)
+# print(max(lst))
+# print(min(lst))
+
+
+# import random
+# lst=[]
+# for i in range(0,100):
+#     lst.append(random.randint(1,6))
+# print(lst.count(1),lst.count(2),lst.count(3),lst.count(4),lst.count(5))
+#1.수식만들기
+#2.무작위 정수 n을 뽑는다
+#3.n개만큼의 정수 (1`9)를 뽑아 무작위 사칙연산을 ㅏ는 수식을 만들어 답까
+#지 계산하는 코드
+
+import random
+n=[]
+for i in range(0,1):
+    n.append(random.randint(2,9))
+n=n.pop()
+k=[]
+for j in range(0,n):
+    k.append(random.randint(1,10))
+print(k)
