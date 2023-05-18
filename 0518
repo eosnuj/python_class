@@ -1,0 +1,128 @@
+#1.수식만들기
+#2.무작위 정수 n을 뽑는다
+#3.n개만큼의 정수 (1`9)를 뽑아 무작위 사칙연산을 하는 수식을 만들어 답까
+#지 계산하는 코드
+
+# import random
+# n=[]
+# for i in range(0,1):
+#     n.append(random.randint(2,9))
+# n=n.pop()
+# k=[]
+# for j in range(0,n):
+#     k.append(random.randint(1,10))
+# print(n)
+# print(k)
+# #따라서 사칙연산 기호의 개수는 n-1
+# c=n-1
+# u=[]
+# for l in range(0,n-1):
+#     u.append(random.randint(1,4))
+# print(u)
+# g=[]
+# dict={1:"+",2:"-",3:"/",4:"*"}
+# for q in range(0,n-1):
+#     Q=u[q]
+#     y=dict[Q]
+#     g.append(y)
+#     print(g)
+# #숫자는 k고 기호가 g
+# for w in range(0,n):
+#     print()
+
+import random
+
+
+n=random.randint(2,8)
+num_list =[]
+
+for i in range(n):
+    num_list.append(random.randint(1,9))
+
+print("산출된 무작위 함수의 개수 : %d"%n)
+print("산출된 무작위 함수 : ",num_list)
+print("/n")
+calc_n=n-1
+sign_list=[]
+
+for i in range(calc_n):
+    sign_list.append(random.randint(1,4))
+
+print("산출된 무작위 기호의 개수 :%d"%n)
+print("산출된 무작위 기호 : ",sign_list)
+
+excanger = {1 : "+",2 : "-", 3 : "*", 4 : "/"}
+
+calc_list=[]
+
+for i in range(calc_n):
+    calc_list.append(excanger[sign_list[i]])
+
+print("변환된 무작위 기호 : ",calc_list)
+print("\n")
+
+fomula_list=[]
+fomula_list.append(num_list[0])
+
+for i in range(n-1):
+    fomula_list.append(calc_list[i])#0-n-1
+    fomula_list.append(num_list[i+1])
+
+print("수식 리스트 :",fomula_list)
+
+fomula_final=""
+for i in range (len(fomula_list)):
+    fomula_final+= " "+ str(fomula_list[i])
+
+i=0
+while i < len(fomula_list):
+    if fomula_list[i]=="*" :
+        fomula_list[i-1]=fomula_list[i-1]*fomula_list[i+1]
+        del fomula_list[i]
+        del fomula_list[i]
+    else:
+        i+=1
+
+
+print("곱셈(*) 연산 후 리스트 :",fomula_list)
+
+i=0
+while i < len(fomula_list):
+    if  fomula_list[i]=="/":
+        fomula_list[i-1] = int(fomula_list[i-1] / fomula_list[i+1])
+        del fomula_list[i]
+        del fomula_list[i]
+
+    else:
+        i +=1
+
+print("나눈 (/) 연산 후 리스트:",fomula_list)
+
+i=0
+while i < len(fomula_list):
+    if fomula_list[i]=="+":
+        fomula_list[i-1]= fomula_list[i-1]+ fomula_list[i+1]
+        del fomula_list[i]
+        del fomula_list[i]
+    else:
+        i+=1
+
+print("덧셈(+) 연산 후 리스트 :",fomula_list)
+
+i=0
+while i < len(fomula_list):
+    if fomula_list[i]=="-":
+        fomula_list[i-1]= fomula_list[i-1] - fomula_list[i+1]
+        del fomula_list[i]
+        del fomula_list[i]
+    else:
+        i+=1
+
+print("뻴셈(-) 연산후 리스트 : ",fomula_list)
+print("\n")
+
+print("연산이 완료된 리스트:",fomula_list)
+print("\n")
+
+print("완료된 계산식")
+print(fomula_final[1:]+"="+str(fomula_list[0]))
