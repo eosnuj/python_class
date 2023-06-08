@@ -1,0 +1,130 @@
+# tic tac toe 만들기
+
+# fuction
+# 판 출력 함수
+# 인자를 받게 매개변수를 설정 함
+# 플레이어 입력값 반환 함수
+# 반환값 있음
+# >>> 잘못된 값을 입력 했을 경우 또는 범위에 벗어난 값을 입력 한 경우 또는 이미 값이 있는
+# 위치를 입력 했을 경우 다시 입력하게 함
+
+# 승패 판정 함수
+# Ai 입력값 반환 함수
+# >>>이미 있는 위치를 입력했을 경우 다시 입력하게 함
+
+
+
+# setup
+# 처음에 게임 판을 출력4
+# 플레이어는 x ,Ai는 O
+
+
+# loop
+# 플레이어 턴에 원하는 위치의 숫자를 입력하여 x 삽입
+# 게임 판 출력
+# Ai는 무작위 위치에 o를 입력
+# 게임 판 출력
+
+# 탈출(종료0조건
+# 같은 문양 가로 세로 대각선 탐색해서 한줄이라도 있으면 승리 or 패배 문구 출력 후
+# 프로그램 종료
+
+
+import random
+
+def board(Gp) :
+    print(Gp[1],"|",Gp[2],"|",Gp[3])
+    print("----------------------")
+    print(Gp[4],"|", Gp[5],"|" ,Gp[6])
+    print("----------------------")
+    print(Gp[7],"|", Gp[8],"|", Gp[9])
+def pt():
+    sc = int(input())
+    while True:
+        if Gp[sc] == ' ':
+            Gp[sc] = 'x'
+            break
+        else:
+            sc = int(input())
+    return Gp
+def at():
+    Ai = (random.randint(1, 9))
+    print(Ai)
+    while True:
+        if Gp[Ai] == ' ':
+            Gp[Ai] = 'o'
+            break
+        else:
+            Ai = random.randint(1, 9)
+    return Gp
+def pw(Gp):
+    if Gp[1]=='x' and Gp[2]=='x' and Gp[3] == 'x':
+        print("player win")
+        exit(0)
+    elif Gp[4]=='x' and Gp[5]=='x' and Gp[6] == 'x':
+        print("player win")
+        exit(0)
+    elif Gp[7]=='x' and Gp[8]=='x' and Gp[9] == 'x':
+        print("player win")
+        exit(0)
+    elif Gp[1]=='x' and Gp[4]=='x' and Gp[7] == 'x':
+        print("player win")
+        exit(0)
+    elif Gp[2]=='x' and Gp[5]=='x' and Gp[8] == 'x':
+        print("player win")
+        exit(0)
+    elif Gp[3]=='x' and Gp[6]=='x' and Gp[9] == 'x':
+        print("player win")
+        exit(0)
+    elif Gp[1]=='x' and Gp[5]=='x' and Gp[9] == 'x':
+        print("player win")
+        exit(0)
+    elif Gp[3]=='x' and Gp[5]=='x' and Gp[7] == 'x':
+        print("player win")
+        exit(0)
+def aw(Gp):
+    if Gp[1]=='o' and Gp[2]=='o' and Gp[3] == 'o':
+        print("Ai win")
+        exit(0)
+    elif Gp[4]=='o' and Gp[5]=='o' and Gp[6] == 'o':
+        print("Ai win")
+        exit(0)
+    elif Gp[7]=='o' and Gp[8]=='o' and Gp[9] == 'o':
+        print("Ai win")
+        exit(0)
+    elif Gp[1]=='o' and Gp[4]=='o' and Gp[7] == 'o':
+        print("Ai win")
+        exit(0)
+    elif Gp[2]=='o' and Gp[5]=='o' and Gp[8] == 'o':
+        print("Ai win")
+        exit(0)
+    elif Gp[3]=='o' and Gp[6]=='o' and Gp[9] == 'o':
+        print("Ai win")
+        exit(0)
+    elif Gp[1]=='o' and Gp[5]=='o' and Gp[9] == 'o':
+        print("Ai win")
+        exit(0)
+    elif Gp[3]=='o' and Gp[5]=='o' and Gp[7] == 'o':
+        print("Ai win")
+        exit(0)
+
+
+
+Gp={1:' ',2:' ',3:' ',
+    4:' ',5:' ',6:' ',
+    7:' ',8:' ',9:' '}
+for i in range(4):
+    print("Player turn")
+    pt()
+    board(Gp)
+    pw(Gp)
+    print("Ai turn")
+    at()
+    board(Gp)
+    aw(Gp)
+print("player turn")
+sc=int(input())
+board(Gp)
+pw(Gp)
+
+print("draw")
