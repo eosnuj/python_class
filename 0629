@@ -1,0 +1,196 @@
+# class cucu:
+#     def __init__(self,a,b):
+#         self.a=a
+#         self.b=b
+#     def cancel(self):
+#         result=self.a+self.b
+#         return result
+#     def start(self):
+#         result=self.a-self.b
+#         return result
+# c=cucu(0,0)
+# c.a=int(input())
+# c.b=int(input())
+# print(c.start())
+
+
+
+
+
+
+#class
+
+#클래스 선언 방법
+
+# class 클래스 이름:
+
+
+# 매서드 선언 방법
+
+#class 클래스 이름:
+    # def 매서드1 이름(self,그 외 매개변수들):
+    #     매서드1의 내용
+    # def 매서드2 이름(self,그 외 매개변수들):
+    #     매서드2의 내용
+    # def 매서드3 이름(self,그 외 매개변수들):
+    #     매서드3의 내용
+
+#객체 생성 방법
+
+#class 클래스 이름:
+#       내용
+
+#객체 이름= 클래스 이름(초기화에 요구되는 여러값...)<---__init__이 있을 경우
+#객체 이름 = 클래스 이름()<--값이 필요 없을 경우
+
+#클래스 매서드 실행하기
+
+#class 클래스 이름:
+#       def 매서드 이름(self,그 이외의 매개변수들):
+#       매서드의 내용
+
+#객체 이름 = 클래스 이름(초기화에 요구되는 여러값...)
+#객체이름.매서드 이름(실행에 요구되는 값)
+
+#생성자 사용하기
+#class 클래스 이름:
+#       def __init__(self,초기화에 요구되는 매개변수들...):
+#       self.변수이름 = 매개변수 이름
+#       self.변수이름 = 매개변수 이름
+#       self.변수이름 = 매개변수 이름
+#       ...
+
+#객체 이름 = 클래스 이름(초기화에 요구되는 값들)
+
+
+
+
+#클래스 상속
+
+#class 부모 클래스 이름:
+#       클래스 내용
+
+#class 자식1 클래스 이름(부모 클래스 이름):
+#       자식1 클래스 내용
+#class 자식2 클래스 이름(부모 클래스 이름):
+#       자식2 클래스 내용
+
+#...
+
+
+#클래스에서의 추상화와 매서드 오버라이딩(예시)
+
+#class par:
+#       def print_p(self,a): #추상화
+#       print()
+
+#class ch1(par):
+#       def print_p(self,a):
+#       print(a)
+
+#class ch2(par):
+#       def print_p(self,a):
+#       print(a+2)
+
+#class ch3(par):
+#       def print_p(self,a):
+#       print(a*3)
+#
+#
+#
+# class lab:
+#     def __init__(selfself,name,num):
+#         self.name=name
+#         self.num=num
+#
+# class student:
+#     def __init__(self,name,major):
+#         self.name=name
+#         self.major=major
+#         self.ownlab  lab("",0)
+#
+#     def input_lab(self):
+#         self.ownlab.name=input("실험실 학과 입력 : ")
+#         self.ownlab.num=input("실험실 번호 입력 : ")
+#
+#     def printinfo(self):
+#         print("학생 이름:",self.name)
+#         print("학생 전공",self.major)
+#         print("실험실 학과",self.ownlab.name)
+#         pritn("실험실 번호",self.ownlab.num)
+#
+#
+# st1=student("김철수","게임공학과")
+# st1.input_lab()
+# st1.printinfo()
+
+
+#t*m의 숫자까지 진행되기 때문에 0부터 해당 숫자까지 n진수로 변환
+#n=진법 t=미리 구해야할 갯수  m=게임 참가 인원  p=튜브의 순서
+#참가인원*튜브가 말해야하는 숫자 갯수만큼 숫자를 구하고
+#p-1부터 m*t까지 m씩 건너뛰면서 튜브의 값을 구함#N은 number라는 뜻
+# def tn(n, N):
+#     s='0123456789ABCDEF'
+#     result=''
+#     if N==0:
+#         return '0'
+#     while N:
+#         result = s[N%n]+result
+#         N//=n
+#     return result
+#
+# def solution(n,t,m,p):
+#     answer=""
+#     text=""
+#     for i in range(t*m):
+#         text+=tn(n,i)
+#
+#     for i in range(p-1,t*m,m):
+#         answer+=text[i]
+#     return answer
+#
+#
+# print(solution(16,16,2,1))
+
+
+
+#은행 관리 시스템
+#첫 화면에 메뉴 선택이 출력된다.
+#1.입금
+#2.출금
+#3.잔액 조회
+#4.예금주 정보
+#5.계좌 이체
+#6.종료
+
+
+#이후 각 번호를 입력할 때마다 다음의 상호 작용이 가능해진다.
+#1 입금의 경우
+# 금액을 입력하고 성공적으로 입금됬다는 문자를 출력
+
+#2 출금의 경우
+#금액을 입력하고 성공적으로 출금됬다는 문자를 출력
+
+
+#3 잔액 조회의 경우
+#잔액을 출력
+
+#4 에금주 정보 조회의 경우
+# 예금주 이름,나이,성별 출력
+
+#계좌 이체의 경우
+# 이체할 계좌를 입력하고 이체 금액을 입력한다.
+#만약 잔액이 부족하다면 잔액 부족 문자를 출력하고 메뉴로 돌아간다.
+
+#6 종ㄹ료의 겨우
+# 프로그램 종료 문자 출력 후 프로그램을 종료한다.
+
+#각 메뉴를 시행 한 후에 다시 메뉴를 출력하고 입력받기를 반복한다.
+
+print('----------------------------------------')
+print('ㅣ'   '1.입금'   'ㅣ'   '2.출금'  'ㅣ'  '3.잔액 조회' 'ㅣ')
+print('----------------------------------------')
+print('ㅣ''4.예금주 정보' 'ㅣ'  '5.계좌 이체' 'ㅣ' '6.종료''ㅣ')
+print('---------------------------------------')
+dic={1:입금,2:출금,3.잔액 조회,4:예금주 정보,5 계좌 이체,6:종료}
+s=int(input())
