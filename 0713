@@ -1,0 +1,52 @@
+#1.bank 클래스를 만들어서 은행시스템 구현하기
+#2.tradelib 클래스를 만들어서 bank와 연결하기
+#3.treadelib 클래스는 거래자명,거래 금액,거래 날짜가 적혀있음
+#4.bank클래스에 '거래내역 조회'를 추가하여 tradelib 클래스르 통해 구현하기
+
+
+
+
+class bank:
+    def __init__(self,H):
+        self.H=H
+    def deposit(self):
+        G=int(input())
+        self.H=self.H+G
+        print("성공적으로 입금되었습니다.")
+    def withdraw(self):
+        G=int(input())
+        self.H = self.H - G
+        if self.H>=0 :
+            print("성공적으로 출금되었습니다.")
+        elif self.H<=0:
+            print("출금에 실패하였습니다(잔액 부족)")
+    def Inquiry(self):
+        print(H)
+    def Account(self):
+        print("예금주 정보를 불러오는 중---")
+        print("계좌 주인:김**")
+        print("계좌 생성 날짜:2023****")
+        print('계좌 번호: 048321-******')
+    def transfer(self):
+        G = int(input())
+        self.H = self.H - G
+        if self.H >= 0 :
+            print("성공적으로 이체되었습니다.")
+        elif self.H <= 0:
+            print("계좌 이체에 실패하였습니다(잔액 부족)")
+    def turnoff(self):
+        print('잠시 후 시스템이 성공적으로 종료됩니다.')
+    def transaction(self):
+        print(n)
+
+
+
+class tradelib:
+    def __init__(self):
+        self.d=[]
+    def setdefauldate(self):
+        self.d.append(['김**',16000,'3월23일'])
+        self.d.append(['김**', 36000, '4월13일'])
+        self.d.append(['김**', 20000, '7월14일'])
+    def adddata(self):
+        self.d.append(['김**',24000,'8월4일'])
