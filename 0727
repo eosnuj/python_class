@@ -1,0 +1,46 @@
+import random
+
+class Account:
+    A_c=0
+    def __init__(self,N,H):
+        self.N=N
+        self.H=H
+        self.bank="sc은행"
+        Account.A_c += 1
+        self.ran_num=" "
+        for i in range(11):
+            self.ran_num+= str(random.randrange(10))
+        self.ran_num=self.ran_num[ :3]+"-"+self.ran_num[3:5]+"-"+self.ran_num[5:]
+    def deposit(self):
+        G=int(input())
+        self.H=G+self.H
+        if Account.A_c ==5:
+            self.H=self.H+(self.H/100)
+    def withdraw(self):
+        G=int(input())
+        if self.H-G>=0 :
+            self.H=self.H-G
+        elif self.H-G<0 :
+            print("잔액이 부족합니다.")
+    def display_info(self):
+        print("은행이름 : {}".format(self.bank))
+        print("예금주 : {}".format(self.N))
+        print("계좌 번호 : {}".format(self.ran_num))
+        print("잔고 : {}".format(self.H))
+
+
+
+    def get_account_num(self):
+        print(Account.A_c)
+
+
+
+k=Account("***",30000)
+x=Account("^^^",55000)
+b=Account("$$$",80000)
+lst=[]
+lst.append(k)
+lst.append(x)
+lst.append(b)
+for j in range(len(lst)):
+    lst[j].display_info()
