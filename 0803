@@ -1,0 +1,101 @@
+# class stock:
+#     def __init__(self,n,c,per,pbr,d):
+#         self.n=n
+#         self.c=c
+#         self.per=per
+#         self.pbr=pbr
+#         self.d=d
+#     def set_name(self, n):
+#         self.n=n
+#     def set_code(self, c):
+#         self.c=c
+#     def get_name(self):
+#         return self.n
+#     def get_code(self):
+#         return self.c
+#     def set_per(self,per):
+#         self.per=per
+#     def set_pbr(self,fbr):
+#         self.fbr=fbr
+#     def set_dividend(self,d):
+#         self.d=d
+# lst=[]
+# samsung = stock("삼성전자","005930",15.79,1.33,2.83)
+# Hyundai = stock("현대차", "005380", 8.70, 0.35, 4.27)
+# LG = stock("LG전자", "066570", 317.34, 0.69, 1.37)
+# samsung.set_per(12.75)
+# lst.append(samsung)
+# lst.append(Hyundai)
+# lst.append(LG)
+# a=stock(None,None,15.79,1.33,2.83)
+# a.set_name("삼성전자")
+# a.set_code("005930")
+# b=stock(None,None,8.70,0.35,4.27)
+# b.set_name("현대차")
+# b.set_code("005380")
+# k=stock(None,None,8.70,0.35,4.27)
+# k.set_name("LG전자")
+# k.set_code("066570")
+# for i in lst:
+#     print(i.c,i.per)
+
+
+# import random
+#
+# slt = [i for i in range(101)]
+# random.shuffle(slt)
+# def bs(lst):
+#     n=len(lst)
+#     for i in range(n):
+#         for j in range(0,n-i-1):
+#             if lst[j]>lst[j+1]:
+#                 lst[j],lst[j + 1]=lst[j + 1],lst[j]
+#     return lst
+# print(bs(slt))
+
+
+# import random
+# slt = [i for i in range(101)]
+# random.shuffle(slt)
+# def ss(lst):
+#     for i in range(len(lst)):
+#         si=i
+#         for j in range(i+1,len(lst)):
+#             if lst[si]>lst[j]:
+#                 si=j
+#         lst[i],lst[si]=lst[si],lst[i]
+#     return lst
+# print(ss(slt))
+
+
+# import random
+# slt = [i for i in range(101)]
+# random.shuffle(slt)
+# def ins(lst):
+#     for i in range(1,len(lst)):
+#         for j in range(i,0,-1):
+#             if lst[j]<lst[j-1]:
+#                 lst[j],lst[j-1]=lst[j-1],lst[j]
+#             else:
+#                 break
+#     return lst
+# print(ins(slt))
+
+
+import random
+slt = [i for i in range(101)]
+random.shuffle(slt)
+def shs(lst):
+    n=len(lst)
+    k=n//2
+    while k>0:
+        for i in range(k,n):
+            v=lst[i]
+            j=i-k
+            while j>=0 and lst[j]>v:
+                lst[j+k]=lst[j]
+                j-=k
+                lst[j+k]=v
+        k//=2
+    return lst
+print(shs(slt))
