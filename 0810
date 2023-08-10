@@ -1,0 +1,12 @@
+def s_sort(a):
+    s = len(a)
+    g = s//2
+    while g>0:
+        for i in range(g,s):
+            k=a[i]
+            j=i
+            while j>=g and a[j-g]>k:
+                a[j]=a[j-g]
+                j-=g
+            a[j]=k
+        g//=2
