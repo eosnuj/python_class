@@ -1,0 +1,146 @@
+# import random
+# lst = [i for i in range(101)]
+# random.shuffle(lst)
+# def sort(a):
+#     s = len(a)
+#     g = s//2
+#     while g>0:
+#         for i in range(g,s):
+#             k=a[i]
+#             j=i
+#             while j>=g and a[j-g]>k:
+#                 a[j]=a[j-g]
+#                 j-=g
+#             a[j]=k
+#         g//=2
+#     return lst
+# print(sort(lst))
+
+
+#일정한 간격g를 리스트 길이의 절반으로 한뒤 실행-->삽입정렬 수행-->g를
+#다시 절반으로 나눠서 수행-->반복하는게 쉘 정렬이다.
+
+
+# import random
+#
+# slt = [i for i in range(101)]
+# random.shuffle(slt)
+# def bubble(lst):
+#     n=len(lst)
+#     for i in range(n):
+#         for j in range(0,n-i-1):
+#             if lst[j]>lst[j+1]:
+#                 lst[j],lst[j + 1]=lst[j + 1],lst[j]
+#     return lst
+# print(bs(slt))
+
+
+# import random
+# slt = [i for i in range(101)]
+# random.shuffle(slt)
+# def ss(lst):
+#     for i in range(len(lst)):
+#         si=i
+#         for j in range(i+1,len(lst)):
+#             if lst[si]>lst[j]:
+#                 si=j
+#         lst[i],lst[si]=lst[si],lst[i]
+#     return lst
+# print(ss(slt))
+
+
+
+# import random
+# slt=[i for i in range(101)]
+# random.shuffle(slt)
+# def ins(lst):
+#     for i in range(1,len(lst)):
+#         for j in range(i,0,-1):
+#             if lst[j]<lst[j-1]:
+#                 lst[j],lst[j-1]=lst[j-1],lst[j]
+#             else:
+#                 break
+#     return lst
+# print(ins(slt))
+
+
+# import time
+# import random
+# slt=[i for i in range(10100)]
+# random.shuffle(slt)
+# def ins(lst):
+#     for i in range(1,len(lst)):
+#         for j in range(i,0,-1):
+#             if lst[j]<lst[j-1]:
+#                 lst[j],lst[j-1]=lst[j-1],lst[j]
+#             else:
+#                 break
+#     return lst   #0.0011444091796875
+import random
+import time
+
+slt = [i for i in range(10100)]
+random.shuffle(slt)
+slt2=slt[:]
+def bubble(lst):
+    n=len(lst)
+    for i in range(n):
+        for j in range(0,n-i-1):
+            if lst[j]>lst[j+1]:
+                lst[j],lst[j + 1]=lst[j + 1],lst[j]
+    return lst
+sart_time=time.time()
+bubble(slt)
+endtime=time.time()
+slt=slt2[:]
+def ins(lst):
+    for i in range(1,len(lst)):
+        for j in range(i,0,-1):
+            if lst[j]<lst[j-1]:
+                lst[j],lst[j-1]=lst[j-1],lst[j]
+            else:
+                break
+    return lst
+star_time=time.time()
+ins(slt)
+en_time=time.time()
+slt=slt2[:]
+def ss(lst):
+    for i in range(len(lst)):
+        si=i
+        for j in range(i+1,len(lst)):
+            if lst[si]>lst[j]:
+                si=j
+        lst[i],lst[si]=lst[si],lst[i]
+    return lst
+start_time=time.time()
+ss(slt)
+end_time=time.time()
+slt=slt2[:]
+def sort(a):
+    s = len(a)
+    g = s//2
+    while g>0:
+        for i in range(g,s):
+            k=a[i]
+            j=i
+            while j>=g and a[j-g]>k:
+                a[j]=a[j-g]
+                j-=g
+            a[j]=k
+        g//=2
+    return a
+strt_time=time.time()
+sort(slt)
+nd_time=time.time()
+slt=slt2[:]
+stat_time=time.time()
+slt.sort()
+ed_time=time.time()
+
+
+print("선택 정렬에 걸린시간 : {}".format(end_time-start_time))
+print("삽입 정렬에 걸린시간: {}".format(en_time-star_time))
+print("퀵 정렬에 걸린시간: {}".format(ed_time-stat_time))
+print("쉘 정렬에 걸린시간: {}".format(nd_time-strt_time))
+print("버블 정렬에 걸린시간: {}".format(endtime-sart_time))
