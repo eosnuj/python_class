@@ -1,0 +1,63 @@
+#k=수확한 귤의 수
+#t=수확한 귤의 크기의 배열
+# def solution(k, t):
+#     answer = 0
+#     a = [0] * (10 ** 7 + 1)
+#     for t in t:
+#         a[t] += 1
+#     a.sort(reverse=True)
+#     T = 0
+#     for i in a:
+#         T += i
+#         answer += 1
+#         if T >= k:
+#             break
+#     return answer
+# print(solution(2 ,[1, 1, 1, 1, 2, 2, 2, 3]))
+
+# id에 해당하는 이름 정보
+# re의 데이터들을 공백 기준으로 분리
+# id에 해당하는 닉네임 정보 생성 혹은 업데이트
+
+# def solution(re):
+#     answer=[]
+#     id=dict()
+#     cs=[list(r.split()) for r in re]
+#
+#     for c in cs:
+#         if c[0]=='enter'or c[0]=='change':
+#             id[c[1]] = c[2]
+#     for c in cs:
+#         if c[0]=='enter':
+#             answer.append(id[c[1]] + "님이 들어왔습니다.")
+#         elif c[0] == 'leave':
+#             answer.append(id[c[1]] + "님이 나갔습니다.")
+#     return answer
+# print(solution(["enter uid1234 Muzi", "enter uid4567 Prodo","leave uid1234","enter uid1234 Prodo","change uid4567 Ryan"]))
+
+
+def solution(msg):
+    answer=[]
+    msg=list(msg)+["0"]
+    idx=27
+    s,e=0,1           #start,end
+
+    while e<len(msg):
+        while ''.join(msg[s:e]) in d:
+            e+=1
+
+        d[''.join(msg[s:e])] = idx
+        idx+=1
+        answer.append(d[''.join(msg[s:e-1])])
+        s,e=e-1,e
+    return answer
+print(solution(KAKAO))
+
+
+
+# 사전 색인 번호
+# 단어 인덱스 시작, 끝
+# 사전에 없는 단어가 나올때까지 단어 인덱스 + 1
+# 새로운 단어 사전에 추가
+# 현재 단어 색인 번호 출력
+# 단어 인덱스 갱신
