@@ -38,3 +38,5 @@
 #z=rep(1:3,4:2)-->[1] 1 1 1 1 2 2 2 3 3 #알아서 이해해라
 #xy=data.frame(x,y)(한칸에 1개씩 데이터값 출력해줌)
 #b=matrix(1;30,3,10)(3칸 10개씩으로 만들어줌)
+a=edit(data.frame())#excel 열어줌
+y=read.csv("c:ex.csv")#다른 파일을 불러옴
