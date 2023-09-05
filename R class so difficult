@@ -53,3 +53,37 @@
 #8    1     1 21
 #9    1     1 16
 #10   1     1 25
+> ex=read.csv("C:/Users/user/OneDrive/문서/R/ex.csv")
+> ex
+   sex grade  x
+1    2     1 25
+2    2     1 28
+3    2     1 33
+4    1     1 31
+5    2     1 26
+6    2     1 25
+7    1     1 23
+8    1     1 21
+9    1     1 16
+10   1     1 25
+> table(ex$sex)
+
+1 2 
+5 5 
+> pie(table(ex$sex))
+> summary(ex$x)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   16.0    23.5    25.0    25.3    27.5    33.0 
+> stem(ex$x)
+
+  The decimal point is 1 digit(s) to the right of the |
+
+  1 | 6
+  2 | 13
+  2 | 55568
+  3 | 13
+
+
+
+
+boxplot(ex$x)
