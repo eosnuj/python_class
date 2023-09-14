@@ -1,0 +1,17 @@
+class stack:
+    def __init__(self):
+        self.top=0
+        self.elements=[]
+    def push(self,x):
+        self.elements.append(x)
+        self.top+=1
+    def pop(self):
+        self.elements.pop()
+        self.top-=1
+        return self.elements.pop()
+    def peek(self):
+        print(self.elements)
+c=stack()
+c.push(3)
+c.pop()
+c.peek()
